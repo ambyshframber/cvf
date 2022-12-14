@@ -1,0 +1,16 @@
+these are some words
+another line
+~
+: hr ( n -- )
+    [CHAR] =
+    BEGIN OVER WHILE
+        SWAP 1- SWAP DUP EMIT
+    REPEAT
+    2DROP
+;
+#
+these are some more words
+
+~ 16 hr #
+
+wow! a horizontal rule!
