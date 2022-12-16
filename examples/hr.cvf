@@ -1,3 +1,4 @@
+~ 20 width ! #
 these are some words
 another line
 ~
@@ -7,6 +8,7 @@ another line
         SWAP 1- SWAP DUP EMIT
     REPEAT
     2DROP
+    '\n' EMIT
 ;
 #
 these are some more words
