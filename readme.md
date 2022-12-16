@@ -38,7 +38,7 @@ i recommend writing a quick shell script to save writing `cat cvf.f document.cvf
 
 ## limitations
 
-if you finish a line with `#` (ie. the next character is a line feed) cvf will not print a newline. however, if you have a space and then a newline, cvf *will* print a newline. this is due to how forth parses the input stream. it's probably fixable, but it would complicate the logic a lot.
+if you finish a forth section with `#` and immediately have a newline, cvf will not print a newline. however, if you have a space and then a newline, cvf *will* print a newline. this is due to how forth parses the input stream. it's probably fixable, but it would complicate the logic a lot.
 
 the default line buffer is 1024 bytes. if for some reason you have individual lines greater than 1024 bytes, you can `ALLOT` a bigger buffer and do some patching (try `SEE linebuf`).
 
